@@ -1,36 +1,59 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Это симулятор автопечати кода, который идеально подойдёт для создания видео в жанре «кодинг-шортс». Приложение позволяет эффектно имитировать процесс набора кода с последующей демонстрацией красивого HTML-элемента — как это делают дизайнеры и разработчики в популярных роликах на YouTube Shorts, TikTok и Reels.
 
-## Getting Started
+# ytubshorts — Демо-симулятор набора кода для YouTube Shorts
 
-First, run the development server:
+Интерактивное Next.js-приложение для создания эффектных видео-демонстраций кода в стиле YouTube Shorts.  
+Поддерживает автопечать, шаблоны, баннеры, визуальные эффекты, мультиязычность и адаптивный дизайн.
+
+## Возможности
+
+- Симуляция набора кода с регулируемой скоростью и ошибками
+- Реалистичный интерфейс «телефона» с анимацией
+- Переключение языков интерфейса (русский, английский, французский)
+- Готовые шаблоны кода для быстрого старта
+- Яркие баннеры и брендирование для видео
+- Современный дизайн с поддержкой светлой/тёмной темы телефона
+- Адаптивность: отлично смотрится на ПК и мобильных
+- Статистика кода: количество символов, примерное время, предупреждения
+
+## Запуск
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Откройте [http://localhost:3000](http://localhost:3000) в браузере.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Как использовать
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. Выберите язык интерфейса и тему телефона.
+2. Введите или выберите шаблон кода.
+3. Настройте скорость печати, ошибки, баннер и другие параметры.
+4. Нажмите **Старт** — наблюдайте за автопечатью кода!
+5. Запишите видео экрана для публикации в Shorts/Reels/TikTok.
 
-## Learn More
+## Технологии
 
-To learn more about Next.js, take a look at the following resources:
+- Next.js 14
+- React
+- Tailwind CSS
+- Custom Hooks & Components
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Автор
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+[Сергей Каманов (mrKamanov)](https://github.com/mrKamanov)
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+> Всё возможно!
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## Поддержать проект
+
+Если вам понравился проект, поддержите его:
+
+- ⭐️ Поставьте звезду на GitHub: [https://github.com/mrKamanov/ytubshorts](https://github.com/mrKamanov/ytubshorts)
+- Bitcoin: `19i9JauVSyDzv9KNDKV1Da9v36GwiZ6at3`
+- Toncoin: `UQB2pUhI3rUKiy-hR3mHMAcXvQ4_QNVGDEuFZcRU9qa7MMeA`
