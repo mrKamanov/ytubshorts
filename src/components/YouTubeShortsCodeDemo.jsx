@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useRef, useCallback } from 'react';
+import React, { useState, useRef, useCallback, useLayoutEffect } from 'react';
 import SyntaxHighlighter from './SyntaxHighlighter';
 import TypingSimulator from '../utils/TypingSimulator';
 import translations from '../i18n/translations';
@@ -120,17 +120,25 @@ const YouTubeShortsCodeDemo = () => {
   const scrollToBottom = useCallback(() => {
     if (codeScrollRef.current && isTyping) {
       const container = codeScrollRef.current;
-      container.scrollTop = container.scrollHeight;
+      if ('scrollTo' in container) {
+        container.scrollTo({
+          top: container.scrollHeight,
+          behavior: 'smooth',
+        });
+      } else {
+        container.scrollTop = container.scrollHeight;
+      }
       if (lineNumbersRef.current) {
         lineNumbersRef.current.scrollTop = container.scrollTop;
       }
+      console.log('scrollToBottom вызван:', container.scrollTop, container.scrollHeight);
     }
   }, [isTyping]);
 
-  React.useEffect(() => {
+  // useLayoutEffect для автоскролла сразу после обновления DOM
+  React.useLayoutEffect(() => {
     if (isTyping && currentCode) {
-      const timeoutId = setTimeout(scrollToBottom, 50);
-      return () => clearTimeout(timeoutId);
+      scrollToBottom();
     }
   }, [currentCode, isTyping, scrollToBottom]);
 
